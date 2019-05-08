@@ -16,14 +16,14 @@ var computerGuess = [];
 window.onload = function() {
 	var compGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 	computerGuess.push(compGuess);
-	console.log(computerGuess[0]);
+	console.log(computerGuess);
 }
 
 
 document.onkeyup = function(event) {
 	var playerGuess = event.key;
 	lettersGuessed.push(playerGuess);
-	console.log(computerGuess[0]);
+	console.log(computerGuess);
 
 if ((playerGuess === computerGuess[0]) && (guessesLeft > 0)) {
 	wins++;
@@ -58,4 +58,3 @@ var html = "<p>Guess what letter I'm thinking of!</p>" +
 document.querySelector("#game").innerHTML = html;
 
 }
-</script>
